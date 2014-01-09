@@ -8,7 +8,7 @@
     + Output (Target)
 
 * Marpa the Parser: libmarpa + interfaces
-    + [libmarpa](http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html)
+    + [libmarpa]
     + Perl Interfaces
         - [Scanless Interface (SLIF)](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod)
         - [Named Argument Interface (NAIF)](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/NAIF.pod)
@@ -25,6 +25,9 @@
     + The Language
         - Simple calculator
         - Precedence
+
+    THIF provides direct access to [libmarpa][libmarpa], NAIF allows describing the grammar rules as Perl array/hash, SLIF supports textual grammars, internal/external lexing, general precedence, events.
+
     + [SLIF](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
         - Describing Syntax
         - [Defining Semantics](https://github.com/rns/Marpa-the-Parser/blob/master/Defining-Semantics-in-SLIF.md)
@@ -36,3 +39,5 @@
 * Handling Ambiguity
     + NAIF
     + SLIF
+
+libmarpa: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
