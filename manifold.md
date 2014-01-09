@@ -28,16 +28,22 @@
 
     THIF provides direct access to [libmarpa][libmarpa], NAIF allows describing the grammar rules as Perl array/hash, SLIF supports textual grammars, internal/external lexing, general precedence, events.
 
-    + [SLIF](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
+    + [SLIF][SLIF]
         - Describing Syntax
         - [Defining Semantics](https://github.com/rns/Marpa-the-Parser/blob/master/Defining-Semantics-in-SLIF.md)
         - Putting it all together
         - Tracing and Debugging
-    + [NAIF](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/NAIF.pod)
-    + [THIF](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Advanced/Thin.pod)
+    + [NAIF][NAIF]
+    + [THIF][THIF]
     
 * Handling Ambiguity
-    + NAIF
-    + SLIF
+    + [NAIF][NAIF]
+    + [SLIF][SLIF]
 
-libmarpa: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
+[libmarpa]: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
+
+[SLIF]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod
+
+[NAIF]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/NAIF.pod
+
+[THIF]: (https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Advanced/Thin.pod)
