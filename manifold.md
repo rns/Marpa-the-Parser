@@ -53,8 +53,8 @@
 
             - bless_package
             - semantics_package
-            - AST
-            - ASF
+            - [AST](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/03/bnf_to_ast.html)
+            - ASF: [high-level](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/ASF.pod), [low level](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Glade.pod)
             - which is more efficient and how much is the difference?
 
 * Misc
