@@ -1,6 +1,6 @@
 ﻿adding 'everything else' rule to a grammar
 
-find all lexemes (symbols being lhs's of ~ rule and literals)
+find all lexemes (symbols being lhs's of ~ rules and literals)
 
 append 
     everything_else ::= join ' | ', @all_lexemes 
