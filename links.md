@@ -11,4 +11,6 @@
 
 [The Marpa Papers](http://savage.net.au/Perl-modules/html/marpa.papers/index.html)
 
+[Conditional Preservation of Whitespace when Parsing with Marpa::R2](http://savage.net.au/Ron/html/Conditional.preservation.of.whitespace.html)
+
 [The Marpa Guide](http://marpa-guide.github.io/index.html)

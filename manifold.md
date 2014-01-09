@@ -40,6 +40,12 @@
     + [NAIF][NAIF]
     + [SLIF][SLIF]
 
+* Ideas
+    + JSON Parsers Benchmark
+        - JSON::XS (parsing and actions in pure C)
+        - JSON::PP (parsing and actions in pure perl)
+        - JSON
+
 [libmarpa]: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
 
 [SLIF]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod
