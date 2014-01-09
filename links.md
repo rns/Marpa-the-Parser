@@ -14,3 +14,9 @@
 [Conditional Preservation of Whitespace when Parsing with Marpa::R2](http://savage.net.au/Ron/html/Conditional.preservation.of.whitespace.html)
 
 [The Marpa Guide](http://marpa-guide.github.io/index.html)
+
+Declarative and/or Procedural Parsing
+
+    + http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/06/mixing-procedural.html
+    + https://groups.google.com/forum/#!topic/marpa-parser/X8AMiENdpVk
+

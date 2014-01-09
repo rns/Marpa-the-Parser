@@ -24,8 +24,4 @@ With Marpa, it means that [The Interpreter Design Pattern](http://en.wikipedia.o
     - [Higher Level Go module for libmarpa](https://github.com/pstuifzand/go-marpa/)
     - [C++ experiment](https://github.com/pstuifzand/marpa-cpp-rules)
 
-* Declarative and/or Procedural Parsing
-    + http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/06/mixing-procedural.html
-    + https://groups.google.com/forum/#!topic/marpa-parser/X8AMiENdpVk
-
 [libmarpa]: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
