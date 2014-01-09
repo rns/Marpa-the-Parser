@@ -26,7 +26,7 @@
         - Simple calculator
         - Precedence
 
-    THIF provides direct access to [libmarpa][libmarpa], NAIF allows describing the grammar rules as Perl array/hash, SLIF supports textual grammars, internal/external lexing, general precedence, events.
+        THIF provides direct access to [libmarpa][libmarpa], NAIF allows describing the grammar rules as Perl array/hash, SLIF supports textual grammars, internal/external lexing, general precedence, events.
 
     + [SLIF][SLIF]
         - Describing Syntax
@@ -56,7 +56,7 @@
     + Lexing in Marpa and Perl
         - [Generating flex Lexical Scanners for Perl Parse::Yapp](http://drops.dagstuhl.de/opus/volltexte/2012/3513/pdf/6.pdf)
         - https://metacpan.org/pod/Parse::Lex
-        - Parse::CLex
+        - Parse::Lex & Parse::CLex
         - Parse::Flex - The Fastest Lexer in the West
 
 [libmarpa]: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
