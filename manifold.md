@@ -28,17 +28,11 @@
         - Precedence
     + [SLIF](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
         - Describing Syntax
-        - Defining Semantics
-            - Actions (semantic_package) and Blessing (bless_package) 
-            - [Actions as blessed data](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
-            - [Actions as blessed code](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
-            - Walking AST
-            - Traversing ASF
-            - Comparison
+        - [Defining Semantics](https://github.com/rns/Marpa-the-Parser/blob/master/Defining-Semantics-in-SLIF.md)
         - Putting it all together
         - Tracing and Debugging
     + [NAIF](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/NAIF.pod)
-    + THIF
+    + [THIF](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Advanced/Thin.pod)
     
 * Handling Ambiguity
 NAIF
