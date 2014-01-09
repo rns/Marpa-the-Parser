@@ -48,7 +48,9 @@
         - JSON::XS (parsing in C, actions in C)
         - JSON::PP (parsing in Perl, actions in Perl)
         - MarpaX::Demo::JSONParser (parsing in C, actions in Perl)
+
             Actions defined via:
+
             - bless_package
             - semantics_package
             - AST
