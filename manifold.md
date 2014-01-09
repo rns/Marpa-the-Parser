@@ -1,26 +1,6 @@
 ﻿Outlines
 --------
 
-* Parsing/Language
-    + Input (Source)
-    + Syntax
-    + Semantics
-    + Output (Target)
-
-* Marpa the Parser: libmarpa + interfaces
-    + [libmarpa]
-    + Perl Interfaces
-        - [Scanless Interface (SLIF)](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod)
-        - [Named Argument Interface (NAIF)](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/NAIF.pod)
-        - [Thin Interface (THIF)](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Advanced/Thin.pod)
-    + Interfaces in Other Languages
-        - [Higher Level Go module for libmarpa](https://github.com/pstuifzand/go-marpa/)
-        - [C++ experiment](https://github.com/pstuifzand/marpa-cpp-rules)
-
-* Declarative and/or Procedural Parsing
-    + http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/06/mixing-procedural.html
-    + https://groups.google.com/forum/#!topic/marpa-parser/X8AMiENdpVk
-
 * Using Marpa with Perl
     + The Language
         - Simple calculator
@@ -43,7 +23,7 @@
     + [SLIF][SLIF]
 
 * Ideas
-    + JSON Parser Comparison
+    + JSON Parsers
         - encoding and decoding
         - JSON::XS (parsing in C, actions in C)
         - JSON::PP (parsing in Perl, actions in Perl)
