@@ -7,12 +7,14 @@ To sound proverbially, if all you have is a parser, then everything is a languag
 With Marpa, it means that [The Interpreter Design Pattern](http://en.wikipedia.org/wiki/Interpreter_pattern), once called [a sort of practical joke](https://sites.google.com/site/steveyegge2/ten-great-books) can now [be practically used](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/03/interpreter.html).
 
 ### Interpreter Pattern
+
     + Input (Source)
     + Syntax
     + Semantics
     + Output (Target)
 
 ### Marpa the Parser: libmarpa + interfaces
+
     + [libmarpa]
     + Perl Interfaces
         - [Scanless Interface (SLIF)](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod)
