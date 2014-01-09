@@ -53,7 +53,11 @@
         - JSON::XS vs. MarpaX::Demo::JSONParser = actions in Perl vs. actions in C
 
 * Misc
-    + [Generating fex Lexical Scanners for Perl Parse::Yapp](http://drops.dagstuhl.de/opus/volltexte/2012/3513/pdf/6.pdf)
+    + Lexing in Marpa and Perl
+        - [Generating flex Lexical Scanners for Perl Parse::Yapp](http://drops.dagstuhl.de/opus/volltexte/2012/3513/pdf/6.pdf)
+        - https://metacpan.org/pod/Parse::Lex
+        - Parse::CLex
+        - Parse::Flex - The Fastest Lexer in the West
 
 [libmarpa]: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
 
