@@ -6,7 +6,7 @@ To sound proverbially, if all you have is a parser, then everything is a languag
 
 With Marpa, it means that [The Interpreter Design Pattern](http://en.wikipedia.org/wiki/Interpreter_pattern), once called [a sort of practical joke](https://sites.google.com/site/steveyegge2/ten-great-books) can now [be practically used](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/03/interpreter.html).
 
-### Interpreter Pattern
+### Interpreter Pattern ([DSL](http://martinfowler.com/dslCatalog/))
 
 + Input (Source)
 + Syntax
