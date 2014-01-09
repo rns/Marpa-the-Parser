@@ -17,6 +17,7 @@
 
 Declarative and/or Procedural Parsing
 
-http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/06/mixing-procedural.html
-https://groups.google.com/forum/#!topic/marpa-parser/X8AMiENdpVk
+    http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/06/mixing-procedural.html
+
+    https://groups.google.com/forum/#!topic/marpa-parser/X8AMiENdpVk
 
