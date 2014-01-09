@@ -7,21 +7,6 @@ To sound proverbially, if all you have is a parser, then everything is a languag
 
 With Marpa, it means that [The Interpreter Design Pattern](http://en.wikipedia.org/wiki/Interpreter_pattern), once called [a sort of practical joke](https://sites.google.com/site/steveyegge2/ten-great-books) can now [be practically used](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/03/interpreter.html).
 
-Marpa Links
------------
-
-[The Marpa website](http://jeffreykegler.github.io/Marpa-web-site/)
-
-[Marpa Tutorials](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/metapages/annotated.html#TUTORIAL) and other posts about Marpa in the author's blog
-
-[marpa parser Google Group](https://groups.google.com/forum/#!forum/marpa-parser)
-
-[Marpa on Stack Overflow](http://stackoverflow.com/questions/tagged/marpa)
-
-[The Marpa Papers](http://savage.net.au/Perl-modules/html/marpa.papers/index.html)
-
-[The Marpa Guide](http://marpa-guide.github.io/index.html)
-
 Outlines
 --------
 
