@@ -41,10 +41,10 @@
     + [SLIF][SLIF]
 
 * Ideas
-    + JSON Parsers Benchmark
+    + JSON Parser Comparison
         - JSON::XS (parsing and actions in pure C)
         - JSON::PP (parsing and actions in pure perl)
-        - JSON
+        - MarpaX::Demo::JSONParser (parsing in C, actions in perl)
 
 [libmarpa]: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
 
