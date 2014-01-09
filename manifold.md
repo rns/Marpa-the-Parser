@@ -1,27 +1,6 @@
 ﻿Outlines
 --------
 
-* Using Marpa with Perl
-    + The Language
-        - Simple calculator
-        - Precedence
-
-            THIF provides direct access to [libmarpa][libmarpa], NAIF allows describing the grammar rules as Perl array/hash, SLIF supports textual grammars, internal/external lexing, general precedence, events.
-
-    + [SLIF][SLIF]
-        - Describing Syntax
-        - [Defining Semantics](https://github.com/rns/Marpa-the-Parser/blob/master/Defining-Semantics-in-SLIF.md)
-        - Putting it all together
-        - Tracing and Debugging
-    + [NAIF][NAIF]
-    + [THIF][THIF]
-    
-* Handling Ambiguity
-    + [NAIF][NAIF]
-        - [multisymbols and read()](https://gist.github.com/rns/3683268)
-        - [single symbols and alternative()](https://gist.github.com/rns/3683179)
-    + [SLIF][SLIF]
-
 * Ideas
     + JSON Parsers
         - encoding and decoding
