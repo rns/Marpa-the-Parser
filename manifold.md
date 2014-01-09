@@ -1,9 +1,9 @@
 ﻿Parsing and Marpa
-=================
+-----------------
 
 Let us define [parsing](http://en.wikipedia.org/wiki/Parsing) as a way to convert input (source) to output (target) according to grammar.
 
-To sound proverbially, if all you have is a parser, then everything is a language. Proverbial bias notwithstanding, in a world, organized around languages, where one language's semantics is another language's syntax, parser(s) can be all you need.
+To sound proverbially, if all you have is a parser, then everything is a language. Proverbial bias notwithstanding, in a world, organized around languages, where one language's semantics is another language's syntax, parser(s) (per the above definition) can be all you need.
 
 With Marpa, it means that [The Interpreter Design Pattern](http://en.wikipedia.org/wiki/Interpreter_pattern), once called [a sort of practical joke](https://sites.google.com/site/steveyegge2/ten-great-books) can now [be practically used](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/03/interpreter.html).
 
@@ -22,8 +22,8 @@ Marpa Links
 
 [The Marpa Guide](http://marpa-guide.github.io/index.html)
 
-Outline
-=======
+Outlines
+========
 
 * Parsing/Language
     + Input (Source)
@@ -50,7 +50,7 @@ Outline
     + The Language
         - Simple calculator
         - Precedence
-    + SLIF
+    + [SLIF](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
         - Describing Syntax
         - Defining Semantics
             - Actions (semantic_package) and Blessing (bless_package) 
