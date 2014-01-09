@@ -44,8 +44,6 @@
         - Parse::Lex & Parse::CLex
         - Parse::Flex - The Fastest Lexer in the West
 
-[libmarpa]: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
-
 [SLIF]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod
 
 [NAIF]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/NAIF.pod
