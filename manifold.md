@@ -44,15 +44,16 @@
 
 * Ideas
     + JSON Parser Comparison
+        - encoding and decoding
         - JSON::XS (parsing in C, actions in C)
         - JSON::PP (parsing in Perl, actions in Perl)
         - MarpaX::Demo::JSONParser (parsing in C, actions in Perl)
+            Actions defined via:
             - bless_package
             - semantics_package
             - AST
             - ASF
             - which is more efficient and how much is the difference?
-        - JSON::XS vs. MarpaX::Demo::JSONParser = actions in Perl vs. actions in C
 
 * Misc
     + Lexing in Marpa and Perl
