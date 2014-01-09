@@ -7,8 +7,7 @@
     + Semantics
     + Output (Target)
 
-* Marpa the Parser
-    Marpa the Parser is libmarpa + interfaces.
+* Marpa the Parser: libmarpa + interfaces
     + [libmarpa](http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html)
     + Perl Interfaces
         - [Scanless Interface (SLIF)](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod)
