@@ -38,6 +38,8 @@
     
 * Handling Ambiguity
     + [NAIF][NAIF]
+        - [multisymbols and read()](https://gist.github.com/rns/3683268)
+        - [single symbols and alternative()](https://gist.github.com/rns/3683179)
     + [SLIF][SLIF]
 
 * Ideas
