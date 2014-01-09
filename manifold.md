@@ -25,6 +25,7 @@
     + The Language
         - Simple calculator
         - Precedence
+
             THIF provides direct access to [libmarpa][libmarpa], NAIF allows describing the grammar rules as Perl array/hash, SLIF supports textual grammars, internal/external lexing, general precedence, events.
 
     + [SLIF][SLIF]
