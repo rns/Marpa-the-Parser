@@ -42,9 +42,18 @@
 
 * Ideas
     + JSON Parser Comparison
-        - JSON::XS (parsing and actions in pure C)
-        - JSON::PP (parsing and actions in pure perl)
-        - MarpaX::Demo::JSONParser (parsing in C, actions in perl)
+        - JSON::XS (parsing in C, actions in C)
+        - JSON::PP (parsing in Perl, actions in Perl)
+        - MarpaX::Demo::JSONParser (parsing in C, actions in Perl)
+            - bless_package
+            - semantics_package
+            - AST
+            - ASF
+            - which is more efficient and how much is the difference?
+        - JSON::XS vs. MarpaX::Demo::JSONParser = actions in Perl vs. actions in C
+
+* Misc
+    + [Generating fex Lexical Scanners for Perl Parse::Yapp](http://drops.dagstuhl.de/opus/volltexte/2012/3513/pdf/6.pdf)
 
 [libmarpa]: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
 
