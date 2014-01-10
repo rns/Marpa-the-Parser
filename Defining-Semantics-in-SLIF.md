@@ -12,7 +12,7 @@
         
         - [`lexeme default`](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#Lexeme-default-statement) statement
     
-    - [`semantic_package`][semantic_package] (SLIF recognizer) and [`bless_package`][`bless_package`] (SLIF grammar) named arguments
+    - [`semantic_package`][semantic_package] (SLIF recognizer) and [`bless_package`][bless_package] (SLIF grammar) named arguments
 
 * Code and Data: `action` `sub`('s) and Parse Nodes' Values
     
