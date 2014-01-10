@@ -4,13 +4,13 @@
 
 * The Key Words
     
-    - [action](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#action) and [bless](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#bless) adverbs as apply to 
+    - [`action`](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#action) and [`bless`](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#bless) adverbs as apply to 
 
         - [rules](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#The-structure-of-rules)
 
-        - [:default](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#Default-pseudo-rules) pseudo-rule, and 
+        - [`:default`](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#Default-pseudo-rules) pseudo-rule, and 
         
-        - [lexeme default](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#Lexeme-default-statement) statement
+        - [`lexeme default`](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/DSL.pod#Lexeme-default-statement) statement
     
     - [`semantic_package`][semantic_package] (SLIF recognizer) and [`bless_package`][`bless_package`] (SLIF grammar) named arguments
 
@@ -24,7 +24,7 @@
 
     + Blessed is the Data
 
-        Actions as blessings of parse nodes' values blessed into `bless_package` processed with subs in the same package.
+        Actions as blessings of nodes' values blessed into `bless_package` processed with subs in the same package.
 
         [example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
 
@@ -32,7 +32,9 @@
 
 * Running more DRY
 
-    + Blessed is the Code and the Data -- walking the blessed AST
+    + Blessed is the Code and the Data
+    
+        Walking the AST of nodes' values blessed into `bless_package`
 
         [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_timeflies.t)
 
