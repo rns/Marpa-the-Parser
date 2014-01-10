@@ -14,7 +14,7 @@
     
     - [`semantic_package`][semantic_package] (SLIF recognizer) and [`bless_package`][`bless_package`] (SLIF grammar) named arguments
 
-* Code and Data: Action sub(s) and Parse Nodes' Values
+* Code and Data: `action` sub(s) and Parse Nodes' Values
     
     + Blessed is the Code
 
