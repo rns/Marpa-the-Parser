@@ -20,13 +20,13 @@
 
         Actions as `sub`'s blessed into `semantic_package`.
 
-        [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
+        [Example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
 
     + Blessed is the Data
 
         Actions as blessings of nodes' values blessed into `bless_package` processed with `sub`'s in the same package.
 
-        [example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
+        [Example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
 
     As only one bless adverb is allowed, the two options above are orthogonal and cannot be mixed and matched.
 
@@ -36,14 +36,14 @@
     
         Walking the AST of nodes' values blessed into `bless_package`
 
-        [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_timeflies.t)
+        [Example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_timeflies.t)
 
     + Advanced actions: [ASF traverse()](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/ASF.pod#traverse)
 
-        [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_panda.t)
+        [Example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_panda.t)
     
 * Comparison
 
-[semantic_package]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/R.pod#semantics_package 
+[semantic_package]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/R.pod#semantics_package
 
-[`bless_package`]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/G.pod#`bless_package` 
+[bless_package]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/G.pod#bless_package
