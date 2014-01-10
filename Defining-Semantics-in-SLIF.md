@@ -2,21 +2,21 @@
 
 * Code and Data: `action` `sub`('s) and Parse Nodes' Values
     
-    + Blessed is the Code
+    + Blessed is the Code: `bless` `action` `sub`s into `semantic_package`
 
-        Actions as `sub`'s blessed into `semantic_package`.
+        Every action sub will be called with an array reference to the parse node' values as an argument.
 
         [Example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
 
-    + Blessed is the Data
+    + Blessed is the Data: `bless` nodes' values into `bless_package`
 
-        Actions as blessings of nodes' values blessed into `bless_package` processed with `sub`'s in the same package.
+        Actions as blessings of nodes' values blessed into `bless_package` processed with `sub`s in the same package.
 
         [Example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
 
     As only one bless adverb is allowed, the two options above are orthogonal and cannot be mixed and matched.
 
-* Running more DRY
+* Running more [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)
 
     + Blessed is the Code and the Data
     
