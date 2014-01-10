@@ -1,6 +1,6 @@
 ﻿### Outline
 
-* Code and Data: `action` `sub`('s) and Parse Nodes' Values
+* Code and Data: `action` `sub`(s) and Parse Nodes' Values
     
     + Blessed is the Code: `bless` `action` `sub`s into `semantic_package`
 
@@ -12,7 +12,7 @@
 
         Actions as blessings of nodes' values blessed into `bless_package` processed with `sub`s in the same package.
 
-        [Example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
+        [Example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod#Synopsis)
 
     As only one bless adverb is allowed, the two options above are orthogonal and cannot be mixed and matched.
 
