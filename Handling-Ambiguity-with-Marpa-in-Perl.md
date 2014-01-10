@@ -1,4 +1,4 @@
-﻿### Handling Ambiguity with Marpa in Perl
+﻿### Handling Ambiguity with Marpa::R2
 
 + [NAIF][NAIF]
         - [multisymbols and read()](https://gist.github.com/rns/3683268)
