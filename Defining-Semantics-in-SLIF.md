@@ -20,7 +20,7 @@
 
     + Blessed is the Code and the Data
     
-        Walking the AST of nodes' values blessed into `bless_package`
+        Walking the AST of nodes' values blessed into `bless_package` and subpackages set for individual rules using `bless`.
 
         Example 1: [writeup](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/03/bnf_to_ast.html), [code](https://gist.github.com/jeffreykegler/5121769)
 
