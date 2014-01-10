@@ -18,13 +18,13 @@
     
     + Blessed is the Code
 
-        Actions as subs blessed into `semantic_package`.
+        Actions as `sub`'s blessed into `semantic_package`.
 
         [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
 
     + Blessed is the Data
 
-        Actions as blessings of nodes' values blessed into `bless_package` processed with subs in the same package.
+        Actions as blessings of nodes' values blessed into `bless_package` processed with `sub`'s in the same package.
 
         [example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
 
