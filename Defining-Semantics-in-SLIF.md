@@ -14,31 +14,31 @@
     
     - [`semantic_package`][semantic_package] (SLIF recognizer) and [`bless_package`][`bless_package`] (SLIF grammar) named arguments
 
-Code and Data: Action sub(s) and Parse Nodes' Values
+* Code and Data: Action sub(s) and Parse Nodes' Values
     
-* Blessed is the Code
+    + Blessed is the Code
 
-    Actions as subs blessed into `semantic_package`.
-    
-    [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
+        Actions as subs blessed into `semantic_package`.
 
-* Blessed is the Data
+        [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
 
-    Actions as blessings of parse nodes' values blessed into `bless_package` processed with subs in the same package.
-    
-    [example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
+    + Blessed is the Data
 
-As only one bless adverb is allowed, the two options above are orthogonal and cannot be mixed and matched.
+        Actions as blessings of parse nodes' values blessed into `bless_package` processed with subs in the same package.
 
-Running more DRY
+        [example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
 
-* Blessed is the Code and the Data -- walking the blessed AST
+    As only one bless adverb is allowed, the two options above are orthogonal and cannot be mixed and matched.
 
-    [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_timeflies.t)
+* Running more DRY
 
-* Advanced actions: [ASF traverse()](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/ASF.pod#traverse)
+    + Blessed is the Code and the Data -- walking the blessed AST
 
-    [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_panda.t)
+        [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_timeflies.t)
+
+    + Advanced actions: [ASF traverse()](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/ASF.pod#traverse)
+
+        [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_panda.t)
     
 * Comparison
 
