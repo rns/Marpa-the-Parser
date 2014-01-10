@@ -26,7 +26,7 @@
 
         [Example 2](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_timeflies.t)
 
-    + Advanced actions: [ASF traverse()](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/ASF.pod#traverse)
+    + Advanced actions, e.g. ambiguious parses, filters: [ASF traverse()](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/ASF.pod#traverse)
 
         [Example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_panda.t)
     
