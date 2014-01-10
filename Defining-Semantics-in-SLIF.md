@@ -19,10 +19,12 @@
 * Traversing an ASF
 * Comparison
 
+Code and Data: Action sub(s) and Parse Nodes' Values
+
 Running DRY
 
 - actions as subs in semantic_package
-- actions as blessings of nodes' values via bless_package processed with subs in bless_package 
+- actions as blessings of parse nodes' values via bless_package
 - actions as bless_package AST walk 
 
 Advanced actions
