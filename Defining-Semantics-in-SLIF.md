@@ -4,7 +4,7 @@
     
     + Blessed is the Code: `bless` `action` `sub`s into `semantic_package`
 
-        Every action sub will be called with an array reference to the parse node' values as an argument.
+        Every sub specified with `action` adverb will be called and passed a reference to array holding the parse node' values.
 
         [Example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
 
