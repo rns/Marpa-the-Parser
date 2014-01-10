@@ -13,22 +13,34 @@
     
     - [semantic_package][semantic_package] (SLIF recognizer) and [bless_package][bless_package] (SLIF grammar) named arguments
     
-* [Actions as blessed data](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
-* [Actions as blessed code](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
-* Walking an AST
-* Traversing an ASF
+* Blessed is the Code
+
+    Actions as subs blessed into semantic_package.
+    
+    [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
+
+* Blessed is the Data (and the Code)
+
+    Actions as blessings of parse nodes' values blessed into bless_package processed with subs in the same package.
+    
+    [example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
+
+    As only one bless adverb is allowed, the two options above are orthogonal.
+
+* Blessed is the AST -- walking the blessed 
+* Advanced action: ASF traverse()
 * Comparison
 
 Code and Data: Action sub(s) and Parse Nodes' Values
 
 Running DRY
 
-- actions as subs in semantic_package
-- actions as blessings of parse nodes' values via bless_package
+- 
+- 
 - actions as bless_package AST walk 
 
 Advanced actions
-- ASF traverse
+- 
 
 [semantic_package]: https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless/R.pod#semantics_package 
 
