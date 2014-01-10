@@ -8,9 +8,9 @@
 
         [Example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
 
-    + Blessed is the Data: `bless` nodes' values into `bless_package`
+    + Blessed is the Data: `bless` parse nodes' values into `bless_package`
 
-        Actions as blessings of nodes' values blessed into `bless_package` processed with `sub`s in the same package.
+        Every node's values are blessed into `bless_package` and must be processed with `sub`s in that package.
 
         [Example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod#Synopsis)
 
@@ -22,7 +22,9 @@
     
         Walking the AST of nodes' values blessed into `bless_package`
 
-        [Example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_timeflies.t)
+        Example 1: [writeup](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2013/03/bnf_to_ast.html), [code](https://gist.github.com/jeffreykegler/5121769)
+
+        [Example 2](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_timeflies.t)
 
     + Advanced actions: [ASF traverse()](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/ASF.pod#traverse)
 
