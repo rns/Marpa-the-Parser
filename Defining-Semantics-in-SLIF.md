@@ -19,16 +19,18 @@
     
     [example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_gsyn.t)
 
-* Blessed is the Data (and the Code)
+* Blessed is the Data
 
     Actions as blessings of parse nodes' values blessed into bless_package processed with subs in the same package.
     
     [example](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Scanless.pod)
 
-    As only one bless adverb is allowed, the two options above are orthogonal.
+As only one bless adverb is allowed, the two options above are orthogonal.
 
-* Blessed is the AST -- walking the blessed 
+* Blessed is the Code and the Data -- walking the blessed AST
+
 * Advanced action: ASF traverse()
+
 * Comparison
 
 Code and Data: Action sub(s) and Parse Nodes' Values
