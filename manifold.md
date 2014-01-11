@@ -1,6 +1,15 @@
 ﻿Outlines
 --------
 
+* sequence separator can be [,] not only a symbol name
+
+* out of SLG::symbol_*(), only symbol_display_form() and symbol_name() seem to be compatible with rule_expand()
+    - https://groups.google.com/forum/#!topic/marpa-parser/SyBfWJ3ylrE
+
+    - write test L0 vs. G1
+
+        `my ( $lhs, @rhs ) = map { $slg->symbol_display_form($_) } $slg->rule_expand($rule_id, 'L0');`
+
 * Ideas
     + JSON Parsers
         - encoding and decoding
