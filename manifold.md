@@ -1,7 +1,25 @@
 ﻿Outlines
 --------
 
+* ASF
+    - span/literal-based ambiguity reporting
+    
+    - cross-sentence disambiguation
+
+* lhs and name to action adverb
+
+    See https://groups.google.com/forum/#!topic/marpa-parser/ub5ZOYF3qIQ
+
+* making --XS-debug work on windows
+
+    branch added
+    
+* 'everything else' rule
+
+* sl_panda.t: remove PennTags bless_package and try to do all semantics in ASF
+
 * sequence separator can be [,] not only a symbol name
+    See https://groups.google.com/forum/#!topic/marpa-parser/9maeN3sDbxE
 
 * out of SLG::symbol_*(), only symbol_display_form() and symbol_name() seem to be compatible with rule_expand()
     - https://groups.google.com/forum/#!topic/marpa-parser/SyBfWJ3ylrE
@@ -9,6 +27,8 @@
     - write test L0 vs. G1
 
         `my ( $lhs, @rhs ) = map { $slg->symbol_display_form($_) } $slg->rule_expand($rule_id, 'L0');`
+        
+    See https://github.com/jeffreykegler/Marpa--R2/pull/74
 
 * Ideas
     + JSON Parsers
