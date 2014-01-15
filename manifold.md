@@ -1,15 +1,43 @@
 ﻿Outlines
 --------
 
-* ASF
-    - span/literal-based ambiguity reporting
-    
-    - cross-sentence disambiguation
+* Data::Range::Compare
+    + ASF's
+        - span/literal-based ambiguity reporting
+        - cross-sentence disambiguation
+    + MarpaX::Filter
+
+* MarpaX::Interface::SSLIF
+    - Writing Marpa Interfaces
+        - MarpaX::Interface abstraction: frontend/backend
+    - MarpaX::Interface::SSLIF
+
+* MarpaX::Languages::SLIF::AST
+    - pretty_print
+    - lint
+    - translate
+        + via MarpaX::Filter?
+    - use ASF?
 
 * lhs and name to action adverb
-
+    cpan/lib/Marpa/R2/Value.pm
     See https://groups.google.com/forum/#!topic/marpa-parser/ub5ZOYF3qIQ
 
+* Marpa::R2::Cookbook
+    - atof
+    - atoi
+    - Parse::Recdescent example
+    - Interpreter pattern
+    
+* Parse Patterns
+    - given a file, how is it better to parse it?
+
+        `$recce->read(slurp($filename))
+
+        for $line (@lines){
+            $recce->read($line);
+        }`
+    
 * making --XS-debug work on windows
 
     branch added
@@ -31,7 +59,7 @@
     See https://github.com/jeffreykegler/Marpa--R2/pull/74
 
 * Ideas
-    + JSON Parsers
+    + JSON Parsers Shoutout
         - encoding and decoding
         - JSON::XS (parsing in C, actions in C)
         - JSON::PP (parsing in Perl, actions in Perl)
