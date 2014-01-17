@@ -30,6 +30,8 @@
 
         [Example](https://metacpan.org/source/JKEGL/Marpa-R2-2.078000/t/sl_panda.t)
     
+        Jeffrey Kegler: I expect the ASF to be the basis of a faster evaluator some day. -- https://groups.google.com/d/msg/marpa-parser/oPnY83-mx7I/AHrZA_Oe_xIJ
+    
 * Discussion
 
 
@@ -37,14 +39,16 @@
 
 in the grammar
 
-    `lstring        ~ quote in_string quote
+`
+    lstring        ~ quote in_string quote
     quote          ~ ["]
     in_string      ~ in_string_char*
-    in_string_char  ~ [^"] | '\"'`
+    in_string_char  ~ [^"] | '\"'
+`
 
 in the code
 
-    `    my $length = length $string;
+`    my $length = length $string;
         for (
             my $pos = $re->read( \$string );
             $pos < $length;
@@ -56,7 +60,7 @@ in the code
             $value = decode_string($value) if -1 != index $value, '\\';
             $re->lexeme_read( 'lstring', $start, $length, $value ) // die;
         } ## end for ( my $pos = $re->read( \$string ); $pos < $length...)
-    `
+`
 
 ### References
 
