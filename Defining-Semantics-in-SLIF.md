@@ -40,11 +40,8 @@
     - in the grammar
 
         `lstring        ~ quote in_string quote
-        
         quote          ~ ["]
-        
         in_string      ~ in_string_char*
-        
         in_string_char  ~ [^"] | '\"'`
 
     - in the code
