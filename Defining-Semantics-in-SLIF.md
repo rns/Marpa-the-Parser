@@ -37,27 +37,27 @@
 
 * Events for semantics -- sl_json.t from Marpa::R2 test suite
 
-in the grammar
+    - in the grammar
 
-`lstring        ~ quote in_string quote
-quote          ~ ["]
-in_string      ~ in_string_char*
-in_string_char  ~ [^"] | '\"'`
+    `lstring        ~ quote in_string quote
+    quote          ~ ["]
+    in_string      ~ in_string_char*
+    in_string_char  ~ [^"] | '\"'`
 
-in the code
+    - in the code
 
-`my $length = length $string;
-for (
-    my $pos = $re->read( \$string );
-    $pos < $length;
-    $pos = $re->resume()
-    )
-{
-    my ( $start, $length ) = $re->pause_span();
-    my $value = substr $string, $start + 1, $length - 2;
-    $value = decode_string($value) if -1 != index $value, '\\';
-    $re->lexeme_read( 'lstring', $start, $length, $value ) // die;
-} ## end for ( my $pos = $re->read( \$string ); $pos < $length...)`
+    `my $length = length $string;
+    for (
+        my $pos = $re->read( \$string );
+        $pos < $length;
+        $pos = $re->resume()
+        )
+    {
+        my ( $start, $length ) = $re->pause_span();
+        my $value = substr $string, $start + 1, $length - 2;
+        $value = decode_string($value) if -1 != index $value, '\\';
+        $re->lexeme_read( 'lstring', $start, $length, $value ) // die;
+    } ## end for ( my $pos = $re->read( \$string ); $pos < $length...)`
 
 ### References
 
