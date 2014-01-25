@@ -22,6 +22,8 @@ With Marpa, it means that [The Interpreter Design Pattern](http://en.wikipedia.o
     - [Thin Interface](https://metacpan.org/pod/release/JKEGL/Marpa-R2-2.078000/pod/Advanced/Thin.pod) (THIF)
 + Interfaces in Other Languages
     - [Higher Level Go module for libmarpa](https://github.com/pstuifzand/go-marpa/)
+    - [go-marpa-gen](https://github.com/pstuifzand/go-marpa-gen)
+    - [go-marpa-thin](https://github.com/pstuifzand/go-marpa-thin)
     - [C++ experiment](https://github.com/pstuifzand/marpa-cpp-rules)
 
 [libmarpa]: http://jeffreykegler.github.io/Marpa-web-site/libmarpa.html
