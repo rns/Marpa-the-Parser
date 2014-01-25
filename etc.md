@@ -14,14 +14,19 @@ Meta
 Priorities
 ----------
 
+add test for spaces in [lhs, values] to sl_gia_err.t
+
+return sub { $scalar } from rule_closure()
+
 multiple grammars
-
+    
 rule array descriptor - 
-
+    timing TBD
+    
 MarpaX::Regex::Verbal
 MarpaX::Parse
-Yaccy
-MarpaX::Lotsawa -- The Pattern Pattern
+Yaccy -- MarpaX::Parse::Simple -- MarpaX::Simple
+MarpaX::Lotsawa -- The Pattern Pattern -- Pattern-based Translation
 
 Lotsawa -- [The Translator Pattern](http://c2.com/cgi/wiki?TranslatorPattern), with a twist.
 
@@ -300,9 +305,11 @@ Interfaces
             includes
     
     - Writing Marpa Interfaces
+
         - MarpaX::Interface abstraction: frontend/backend
 
     - Sneakpeak
+            
             Script:
                     Expression (',' Expression )* { @1 }
 
@@ -327,7 +334,6 @@ Interfaces
             @rhs
             @values
 
-            @1, @2 — rhs_sequence1, rhs_sequence2
             see how it's done in regexps
             %lhs, %1, %2 — lhs => { rhs_symbol1 => value1 , rhs_symbol2 => value2 } if and rhs names are needed
             insertion order — Tie::IxHash
