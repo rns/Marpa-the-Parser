@@ -17,12 +17,12 @@ Priorities
 perfect -- simple, well-defined, self-contained -- JK
 
 * Regexp::Marpa
-    Regex syntax for Marpa
-    Marpa-powered Regexps -- compile regex to SLIF and parse input with it
-    hard cases -- stays linear where regex cannot
-    use advanced features without bothering about speed
+    - based on Marpa::Languages::Regex::AST
+    - Regex syntax for Marpa
+    - Marpa-powered Regexps -- compile regex to SLIF and parse input with it
+    + hard cases -- stays linear where regex cannot
+    + use advanced features without bothering about speed
         - capture everything you need
-        - 
         - recursion and backreferences safely
     + benchmark -- https://gist.github.com/jeffreykegler/3271072
     
@@ -32,15 +32,7 @@ perfect -- simple, well-defined, self-contained -- JK
     rule + closure = syntax + semantics
     base: XML + Namespaces
 
-* parse trees traversing: xpath-like syntax for rule-based dispatch
-    lhs/rhs => sub {}
-    
-
 multiple grammars
-
-grind2ast for Jeffrey to user Marpa-based tools
-    -- https://groups.google.com/d/msg/marpa-parser/qWAIF2S5w0c/SFjpSJLsDb8J
-    -- http://www.network-theory.co.uk/docs/valgrind/valgrind_141.html
 
 MarpaX::Parse
 MarpaX::Regex
@@ -61,7 +53,7 @@ The Lotsawa Manifesto
 [My philosophical viewpoint](http://web.archive.org/web/20120206150643/http://cs.nyu.edu/kandathi/goedel_viewpoint.html)
 -- Kurt Friedrich Godel, c. 1960.
 
-    0. Your really know it only when you talk to it.
+    0. You really know it only when you talk to it -- you know its language.
     1. Language is syntax and semantics.
     2. One language's syntax is another's semantics.
     3. There are terminal languages (whose semantics is used directly) and non-terminal (intermediate) languages.
@@ -472,8 +464,32 @@ Visibility
 * MarpaX::Translate
     
     generalized pattern-based translation
-    given 2 BNFs and rules, generate translator
-    regexp to 
+    given 2 BNFs and patterns, generate translator
+    patterns show how to transform a source rule to target rule
+    patterns can be context-sensitive (contain terminals)
+    
+    wAx -> wyx
+    
+    lhs1 ::= wAx 
+    lhs2 ::= wyx
+    lhs1 ::= lhs2
+
+ <top> ::= <a> ")"
+ <a>   ::= "(" <exp>
+
+ "(" <exp> ")" ::= 7
+ 
+ top ::= a ')'
+ a   ::= '(' exp
+ seven_rule ::= '(' exp ')'
+ seven_digit ::= 7
+ seven_rule ::= seven_digit
+
+<top> may expand into <a> ")";
+which may expand into "(" <exp> ")";
+which may expand into 7.
+
+    Regex/SLIF as App 1
 
         Translation Framework
 
