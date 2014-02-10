@@ -14,17 +14,40 @@ Meta
 Priorities
 ----------
 
-add test for spaces in [lhs, values] to sl_gia_err.t
+perfect -- simple, well-defined, self-contained -- JK
 
-return sub { $scalar } from rule_closure()
+* Regexp::Marpa
+    Regex syntax for Marpa
+    Marpa-powered Regexps -- compile regex to SLIF and parse input with it
+    hard cases -- stays linear where regex cannot
+    use advanced features without bothering about speed
+        - capture everything you need
+        - 
+        - recursion and backreferences safely
+    + benchmark -- https://gist.github.com/jeffreykegler/3271072
+    
+* BNF + Namespaces + Actions
+    systems building
+    binary operations on grammars
+    rule + closure = syntax + semantics
+    base: XML + Namespaces
+
+* parse trees traversing: xpath-like syntax for rule-based dispatch
+    lhs/rhs => sub {}
+    
 
 multiple grammars
-    
-rule array descriptor - 
-    timing TBD
-    
-MarpaX::Regex::Verbal
+
+grind2ast for Jeffrey to user Marpa-based tools
+    -- https://groups.google.com/d/msg/marpa-parser/qWAIF2S5w0c/SFjpSJLsDb8J
+    -- http://www.network-theory.co.uk/docs/valgrind/valgrind_141.html
+
 MarpaX::Parse
+MarpaX::Regex
+MarpaX::Languages::SLIF::AST
+MarpaX::NLP
+    MarpaX::Languages::English::AST
+    MarpaX::Languages::Russian::AST
 Yaccy -- MarpaX::Parse::Simple -- MarpaX::Simple
 MarpaX::Lotsawa -- The Pattern Pattern -- Pattern-based Translation
 
@@ -64,80 +87,16 @@ The Pattern Pattern
     
     pattern-based translation
     
-rule_closure()
-
-    sl_panda1.t is ready for testing with ASF::rh_values()
-    Deyan's feedback is sought
-
-* add ruleid
-
 * program in BNF
 
+* MarpaX::Parse.tws
+        
 * semantics 
     
     Ain't no OO -- grasp it when you see it
 
     Rules are `sub`s
         
-        MarpaX::Parse
-            Declarative and Procedural Parsing unified
-            AST/ASF-agnostic
-                ASF for ambiguous grammars in the same interface
-            Parsing as Traversing -- Semantic parsing 
-                traverse input (events)
-                    do semantics once the data are ready
-                        via events, e.g. sl_json.t trims quotes -- this was an inspiration
-                traverse parse tree/forest
-            
-            Case Study: 
-
-            MarpaX::Parse::JSON -- in the same distro, like Marpa::HTML
-            
-        
-        my $p1 = MarpaX::Parse->new($grammar1, $traverser1); # to act as a filter in pipeline
-        my $p2 = MarpaX::Parse->new($grammar2, $traverser2);
-        
-        my $v = ($p1 | $p2)->value($input);
-        
-        my $value = MarpaX::Parse->value($grammar, $traverser, $input);
-        
-        MarpaX::Parse->p(<<GRAMMAR, <<TRAVERSER, <<INPUT);
-        
-        GRAMMAR
-        
-        TRAVERSER
-        
-        INPUT
-        
-        
-                        
-                ASF::*::next_symch
-                    set data to make them available
-                    return
-                    for the next call
-                    
-                closures without eval
-
-            signature-based dispatch
-                lhs ::= rhs11 rhs12 rhs12 ... 
-                      | rhs21 rhs22 rhs22 ... 
-                      ...
-                      adverbs
-                data -- per array descriptor action
-                $node
-                    start
-                    length
-                    lhs
-                    rule
-                    values
-                    grammar (G or L)
-                    recognizer
-                    phase
-                    event
-                        trigger
-                        read()/resume()
-                    
-
     - must add value()
         - the user must speak her language - i.e. as for value
         - and the grammars must speak theirs
@@ -163,7 +122,7 @@ rule_closure()
         - at least the semantic (those containing properly mapped values) nodes of it
         
     - think Perl6 
-
+    
 * lhs_desc -> MarpaX::Interface::SLIF::AST (Marpa::R2::AST hopeful)
 
     - MarpaX::Interface::SLIF::AST
@@ -206,6 +165,7 @@ Current
 -------
 
 * MarpaX::Languages::SLIF::AST
+    - syntax highlighter for SLIF
     - pretty_print
     - lint
     - translate to other BNF formats
@@ -268,6 +228,9 @@ NLP
 ---
 
 * MarpaX-NLP.tws
+    - MarpaX::NLP
+        - MarpaX::Languages::Russian::AST
+        - MarpaX::Languages::English::AST    
 
 * Data::Range::Compare
     + ASF's
@@ -356,23 +319,6 @@ Interfaces
             Action reuse -- references to actions 
             lhs : rhs { @lhs/rhs_alternative_no }
 
-* MarpaX::Parse
-    ! this starts when grammar (including lexer) and recognizer are here
-    - parser interface to Marpa's grammars and recognizers:
-        - you have a gram and a rec: now you can 
-            my $p = MarpaX::Parse->new($gram, $rec)->parse($input);
-        - you have a gram source (string, file, anything string-tied)
-            my $p = MarpaX::Parse->new($gram)->parse($input)
-    - ->new($grammar or $grammar_source or grammar_file)
-      parse($ref -- string or anything tie'able to string: filename, filehandle)
-    - given a file, how is it better to parse it?
-
-        `$recce->read(slurp($filename))
-
-        for $line (@lines){
-            $recce->read($line);
-        }`
-
 Misc
 ----
 
@@ -391,9 +337,92 @@ Misc
 Touchups
 --------
 
-ASF Touchups
-    - move Cartesian product into a method of ASF
-    - document that $glade->next() may change rule_id
+* wrap symbol names with spaces in <> in error messages
+
+    + LHS of sequence rule would not be unique: any character except square bracket -> [[^\[\]]]
+    
+    see branch
+
+* SLIF: empty alternatives -- implicit empty rules a-la YACC -- not allowed
+
+        lhs ::= | rhs
+        lhs ::= rhs | 
+
+    are erros, but 
+
+        lhs ::= 
+
+    isn't
+    
+* SLIF lint
+    
+    + MarpaX::Languages::SLIF::AST
+        - fmt, lint as methods and command-line tools
+    + undefined symbols -- on RHS and not on LHS
+    + unused symbols -- on LHS and not on any RHS
+        - [:alnum:] -- metag.bnf
+    + ineffective precedence
+        - using || on non-recursive rules (no identical symbols on LHS and RHS)
+    + adverbs applicability is enforced only syntactically based on rule type
+        - assoc inapplicable -- no warning
+                lhs ::= rhs1 rhs2 ||  rhs1 rhs2 assoc
+        - separator and/or proper may appear on sequence rules
+    + duplicate RHS's
+            lhs ::= rhs1 rhs2 || rhs1 rhs2
+    + "got/expected" error messages rather than 'lexeme '...' rejected at'
+
+    Proper CFGs[edit]
+    A context-free grammar is said to be proper, if it has
+
+        no inaccessible symbols:
+        no unproductive symbols:
+        no empty-productions:
+        no cycles
+
+    ?+ normalization -- CNF
+        http://jflap.org/tutorial/
+        + useless symbols
+        + empty rules  -- epsilon rhs has no symbols
+            http://eli.thegreenplace.net/2010/02/08/removing-epsilon-productions-from-context-free-grammars/
+        + unit productions -- rhs has only one variable.
+        http://math.stackexchange.com/questions/296243/converting-to-chomsky-normal-form
+        Why Chomsky Normal Form?
+            http://people.cs.clemson.edu/~goddard/texts/theoryOfComputation/9a.pdf
+
+* SLIF touchups
+    + DRY refactoring
+        - Value.pm DO_CONSTANT my $rule_desc;... exception
+        
+* rule array descriptor
+    timing TBD
+
+* threading test
+    
+    potential test case -- http://irclog.perlgeek.de/marpa/2014-02-03#i_8224293
+    
+    http://stackoverflow.com/questions/12370935/how-to-create-threads-in-perl
+    http://search.cpan.org/~rjbs/perl-5.18.2/pod/perlthrtut.pod#Basic_semaphores
+    apache log files
+
++ Half-done
+
+    * move Cartesian product into a method of ASF preserving Displays
+
+        Now that sl_panda1.t has no displays, 
+        removing the Cartesian product from it and adding a sub to ASF.pm
+        should not affect the display.
+
+        pending issue #113
+
++ Done
+
+    * rule_closure()
+
+        sl_panda1.t is ready for testing with ASF::rh_values()
+        Deyan's feedback is sought
+
+
+    * document that $glade->next() may change rule_id
 
     * ASF.pod =~ s/rh_count()/rh_length()/
 
@@ -406,7 +435,9 @@ ASF Touchups
         the relevant getter getters. That's because glade->next() may change 
         the current glade in recursive traverser calls.
 
-* Done
+    * add test for spaces in [lhs, values] to sl_gia_err.t
+
+    * return sub { $scalar } from rule_closure()
 
     * indicates that indicates that in api.texi
         + https://github.com/jeffreykegler/Marpa--R2/pull/88
@@ -513,29 +544,115 @@ Visibility
     MarpaX::Interface::SLIF::AST
     
 * articles/books
-
-    Know Thy Rules
     
-    Let's start empty. Empty rule that is.
+    + What is Marpa
+                
+        "Marpa does the job" -- http://blogs.perl.org/users/jeffrey_kegler/2012/03/user-experiences-with-marpa-some-observations.html
+        
+        - algorithm
+            
+            Aknowledgements.pod
+            Jeffrey's article
+            
+        - software -- libmarpa + interfaces 
+
+            - SLIF
+                - state-of-the-art
+            - NAIF 
+                - deprecated, but still used and working
+                - programmatic grammar manipulation
+            - THIF
+                - if you need a real speed
+            - other languages
+            
+    * SLIF
+
+        + Syntax
+
+            + Know Thy Rules
+
+                Let's start empty. Empty rule that is.
+
+                    :start  ::= list
+                    list    ::= elem | list (',') elem
+                    elem    ::= 
+                    elem    ::=  'a' | 'b' | 'c'
+
+                    -- Jeffrey Kegler, http://scsys.co.uk:8002/291626?submit=Format+it%21
+
+        + Advanced Topics
+
+            + Thread-safety and Threaded applications
+                
+                Perl -- Marpa-R2 
+                Go -- go-marpa
+                C++?
+                C?
+
+            + Events in Marpa: What are they For
+
+                - for diagnostic messages
+
+                    Marpa, when the parse fails, knows exactly where and why.  Additionally, 
+                    now that I've added events, it is convenient to add "error productions" 
+                    -- rules which, if they match, indicate an error.  These rules can be used to catch common errors.  
+                    -- https://groups.google.com/d/msg/marpa-parser/CXcLmksuQhw/KurF_p01HE0J
+
+                - for semantics
+
+            + Ambiguity
+
+                - Ambiguous input
+                - Lexing Ambiguous Input
+                    - Ambiguous lexers
+                        - multisymbols
+                        - ambiguous tokens
+                - Parsing Ambiguous Input
+                    - Ambiguous grammars
+                - Ambiguous output -- Pruning and Disambiguation
+                    - span-based disambiguation reporting
+                    - cross-sentence disambiguation
+
+            + Linearity
+
+                - Test::Linearity
+                    - time 
+                    - memory
+                    - JSON
+                    - HTML
+            
+        + Applications
+            
+            Savage
+                GraphViz 
+                SVG
+            Durand
+                cscan, c2ast
+                transpiling
+            MarpaX::Regex
+            MarpaX::Filter
+            MarpaX::NLP
+            Marpa::HTML
+            Marpa::JSON
+         
+         + Projects for the Advantageous
     
-        :start  ::= list
-        list    ::= elem | list (',') elem
-        elem    ::= 
-        elem    ::=  'a' | 'b' | 'c'
+    * Marpa SLIF Cookbook
+    
+        - balanced text ( P := P P | (P) | (
+        ) )
+        
+    * Current events
+    
+    * Internals
+    
+    * TODOs
 
-        -- Jeffrey Kegler, http://scsys.co.uk:8002/291626?submit=Format+it%21
-
-* syntax highlighter for SLIF
-
-    - MarpaX::Languages::SLIF::AST
-
+            * THIF
+        
 * modules
     
     - MarpaX::Filter
-
-    - MarpaX::NLP
-        - MarpaX::Languages::Russian::AST
-        - MarpaX::Languages::English::AST    
 
     - MarpaX::SGML
     - MarpaX::Languages::JSON::AST
